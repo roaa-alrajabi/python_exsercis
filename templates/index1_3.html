@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+       table{
+           font-family: Arial, sans-serif;
+           border-collapse: collapse;
+           width: 100%;
+       }
+       td,tr{
+           border: 1px solid #dddddd;
+           text-align: left;
+           padding: 8px;
+       }
+       tr:nth-child(even){
+           background-color: #dddddd;
+       }
+   </style> 
+   <p>current users </p>
+   <table>
+       <tr>
+           <th>first name</th>
+           <th>last name</th>
+           <th>age</th>
+       </tr>
+       {%for user in users%}
+          <tr>
+             <td>{{user[0]}}</td>
+             <td>{{user[1]}}</td>
+             <td>{{user[2]}}</td>
+          </tr>
+       {%endfor%}
+   </table>
+</body>
+</html>
